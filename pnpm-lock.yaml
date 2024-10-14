@@ -367,15 +367,15 @@ importers:
       '@allo-team/allo-v2-sdk':
         specifier: ^1.0.79
         version: 1.0.79(@typechain/ethers-v6@0.5.1(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.6.2))(typescript@5.6.2))(bufferutil@4.0.8)(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ts-node@10.9.2(@types/node@18.19.34)(typescript@5.6.2))(typechain@8.3.2(typescript@5.6.2))(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
+      '@b0rza/gitcoin-chain-data':
+        specifier: 1.0.40
+        version: 1.0.40(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
       '@ethersproject/abstract-signer':
         specifier: ^5.7.0
         version: 5.7.0
       '@ethersproject/providers':
         specifier: ^5.7.2
         version: 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@gitcoin/gitcoin-chain-data':
-        specifier: ^1.0.40
-        version: 1.0.40(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
       '@gitcoinco/passport-sdk-types':
         specifier: ^0.2.0
         version: 0.2.0
@@ -1328,6 +1328,12 @@ packages:
 
   '@assemblyscript/loader@0.9.4':
     resolution: {integrity: sha512-HazVq9zwTVwGmqdwYzu7WyQ6FQVZ7SwET0KKQuKm55jD0IfUpZgN0OPIiZG3zV1iSrVYcN0bdwLRXI/VNCYsUA==}
+
+  '@b0rza/gitcoin-chain-data@1.0.40':
+    resolution: {integrity: sha512-h3yPjxlbRavPrFQV2Ex4qe+SavSVKRp+JbcKdEb3xV6RrVlGe0S3IGx6Gph+vkzrTjSi7aSWT5+DCH8Zx+TbcA==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.5'}
+    peerDependencies:
+      typescript: ^5.0.0
 
   '@babel/code-frame@7.24.2':
     resolution: {integrity: sha512-y5+tLQyV8pg3fsiln67BVLD1P13Eg4lh5RW9mF0zUuvLrv9uIQ4MCL+CRT+FTsBlBjcIan6PGsLcBN0m3ClUyQ==}
@@ -3743,12 +3749,6 @@ packages:
 
   '@foundry-rs/easy-foundryup@0.1.3':
     resolution: {integrity: sha512-Funb4hrSBeikKCmccFT/d3Ud5o92tlIZHTJeMCVk5b54/+CHZHr4g7MmtvO5xrGhxrOebQ0L+ojIj+VixgW7ug==}
-
-  '@gitcoin/gitcoin-chain-data@1.0.40':
-    resolution: {integrity: sha512-2Tw7HOynaKHUS02Awj4qeziWU7MGkAAMRUWgt8rQoUAD+aEWeMOkgmStWvdKj+uDNtKjjRD9j+gVvWr4+Z58OA==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.5'}
-    peerDependencies:
-      typescript: ^5.0.0
 
   '@gitcoinco/passport-sdk-types@0.1.2':
     resolution: {integrity: sha512-iAyvw1r+ZwSU/+wkvU0hI+NlaDPne+wot31V4Ya4Nx3Ru47grqEQa8jcj+WalV1RFZLhIJ84CppqI+PRoch7+g==}
@@ -15801,6 +15801,15 @@ snapshots:
 
   '@assemblyscript/loader@0.9.4': {}
 
+  '@b0rza/gitcoin-chain-data@1.0.40(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)':
+    dependencies:
+      typescript: 5.6.2
+      viem: 2.13.10(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+      - zod
+
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.7
@@ -19128,15 +19137,6 @@ snapshots:
     dependencies:
       command-exists: 1.2.9
       ts-interface-checker: 0.1.13
-
-  '@gitcoin/gitcoin-chain-data@1.0.40(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)':
-    dependencies:
-      typescript: 5.6.2
-      viem: 2.13.10(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-      - zod
 
   '@gitcoinco/passport-sdk-types@0.1.2': {}
 
