@@ -1,4 +1,4 @@
-import { TToken } from "@gitcoin/gitcoin-chain-data/dist/types";
+import { TToken } from "@b0rza/gitcoin-chain-data/dist/types";
 
 export type PermitSignature = {
   v: number;

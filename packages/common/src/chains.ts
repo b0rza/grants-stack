@@ -1,6 +1,6 @@
 import { zeroAddress } from "viem";
 import { error, Result, success } from "./allo/common";
-import { getChains, TChain } from "@gitcoin/gitcoin-chain-data";
+import { getChains, TChain } from "@b0rza/gitcoin-chain-data";
 import { Chain } from "@rainbow-me/rainbowkit";
 
 const chainData = getChains();

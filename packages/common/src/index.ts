@@ -6,7 +6,7 @@ import z from "zod";
 import { Round } from "data-layer";
 import { getAlloVersion, getConfig } from "./config";
 import moment from "moment-timezone";
-import { getChainById } from "@gitcoin/gitcoin-chain-data";
+import { getChainById } from "@b0rza/gitcoin-chain-data";
 
 export * from "./icons";
 export * from "./markdown";
@@ -16,7 +16,7 @@ export * from "./payoutTokens";
 
 export * from "./services/passport/passportCredentials";
 export { PassportVerifierWithExpiration } from "./services/passport/credentialVerifier";
-export * from "@gitcoin/gitcoin-chain-data";
+export * from "@b0rza/gitcoin-chain-data";
 
 export function useParams<T extends Record<string, string> = never>() {
   return useRouterParams<T>() as T;

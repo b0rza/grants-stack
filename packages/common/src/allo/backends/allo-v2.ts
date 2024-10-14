@@ -48,7 +48,7 @@ import { StandardMerkleTree } from "@openzeppelin/merkle-tree";
 import { buildUpdatedRowsOfApplicationStatuses } from "../application";
 import { BigNumber, utils } from "ethers";
 import { Distribution } from "@allo-team/allo-v2-sdk/dist/strategies/DonationVotingMerkleDistributionStrategy/types";
-import { TToken, getChainById } from "@gitcoin/gitcoin-chain-data";
+import { TToken, getChainById } from "@b0rza/gitcoin-chain-data";
 
 function getStrategyAddress(strategy: RoundCategory, chainId: number): string {
   return strategy === RoundCategory.QuadraticFunding
