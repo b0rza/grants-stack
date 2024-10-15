@@ -368,8 +368,8 @@ importers:
         specifier: ^1.0.79
         version: 1.0.79(@typechain/ethers-v6@0.5.1(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.6.2))(typescript@5.6.2))(bufferutil@4.0.8)(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ts-node@10.9.2(@types/node@18.19.34)(typescript@5.6.2))(typechain@8.3.2(typescript@5.6.2))(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
       '@b0rza/gitcoin-chain-data':
-        specifier: 1.0.40
-        version: 1.0.40(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
+        specifier: 1.1.1
+        version: 1.1.1(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
       '@ethersproject/abstract-signer':
         specifier: ^5.7.0
         version: 5.7.0
@@ -1329,8 +1329,8 @@ packages:
   '@assemblyscript/loader@0.9.4':
     resolution: {integrity: sha512-HazVq9zwTVwGmqdwYzu7WyQ6FQVZ7SwET0KKQuKm55jD0IfUpZgN0OPIiZG3zV1iSrVYcN0bdwLRXI/VNCYsUA==}
 
-  '@b0rza/gitcoin-chain-data@1.0.40':
-    resolution: {integrity: sha512-h3yPjxlbRavPrFQV2Ex4qe+SavSVKRp+JbcKdEb3xV6RrVlGe0S3IGx6Gph+vkzrTjSi7aSWT5+DCH8Zx+TbcA==}
+  '@b0rza/gitcoin-chain-data@1.1.1':
+    resolution: {integrity: sha512-dFWWQEUzTAkFLgGfhyYEdz3EoNNRi32qZ9IndfeHSMW8rwGlHQHTb22g+77TmpvwejmnyXGJs893bIi2/noHwA==}
     engines: {node: '>=16.15.0', npm: '>=8.5.5'}
     peerDependencies:
       typescript: ^5.0.0
@@ -15801,7 +15801,7 @@ snapshots:
 
   '@assemblyscript/loader@0.9.4': {}
 
-  '@b0rza/gitcoin-chain-data@1.0.40(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)':
+  '@b0rza/gitcoin-chain-data@1.1.1(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)':
     dependencies:
       typescript: 5.6.2
       viem: 2.13.10(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@5.0.10)(zod@3.23.8)
