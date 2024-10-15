@@ -9,7 +9,10 @@ import { type Account, type Chain, type Client, type Transport } from "viem";
 import { Connector } from "wagmi";
 
 export const allChains: RChain[] =
-  process.env.REACT_APP_ENV === "development" ? allNetworks : mainnetNetworks;
+  process.env.REACT_APP_ENV === "development" ||
+  process.env.REACT_APP_ALLOW_TESTNETS === "true"
+    ? allNetworks
+    : mainnetNetworks;
 
 /* TODO: remove hardcoded value once we have environment variables validation */
 const projectId =

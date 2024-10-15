@@ -3,7 +3,10 @@ import { allNetworks, mainnetNetworks } from "common/src/chains";
 import { Chain } from "@rainbow-me/rainbowkit";
 
 const allChains: Chain[] =
-  process.env.REACT_APP_ENV === "development" ? allNetworks : mainnetNetworks;
+  process.env.REACT_APP_ENV === "development" ||
+  process.env.REACT_APP_ALLOW_TESTNETS === "true"
+    ? allNetworks
+    : mainnetNetworks;
 
 export function getEnabledChainsAndProviders() {
   const config = getConfig();
