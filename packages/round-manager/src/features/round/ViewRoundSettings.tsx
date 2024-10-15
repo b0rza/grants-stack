@@ -67,6 +67,7 @@ type EditMode = {
 };
 
 const isV2 = getConfig().allo.version === "allo-v2";
+const allowInconsistentDates = process.env.REACT_APP_ALLOW_INCONSISTENT_DATES === "true";
 
 const generateUpdateRoundData = (
   oldRoundData: Round,
@@ -1289,11 +1290,11 @@ function RoundApplicationPeriod(props: {
   const yesterday = moment().subtract(1, "day");
 
   const disablePastDate = (current: moment.Moment) => {
-    return current.isAfter(yesterday);
+    return allowInconsistentDates || current.isAfter(yesterday);
   };
 
   const disableBeforeApplicationStartDate = (current: moment.Moment) => {
-    return current.isAfter(applicationStartDate);
+    return allowInconsistentDates || current.isAfter(applicationStartDate);
   };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -1302,7 +1303,7 @@ function RoundApplicationPeriod(props: {
   // };
 
   const disableBeforeRoundStartDate = (current: moment.Moment) => {
-    return current.isAfter(roundStartDate);
+    return allowInconsistentDates || current.isAfter(roundStartDate);
   };
 
   const timeHasPassed = (inputTime: moment.Moment) => {

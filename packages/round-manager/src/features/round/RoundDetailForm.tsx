@@ -31,6 +31,8 @@ import { FormStepper } from "../common/FormStepper";
 import { FormContext } from "../common/FormWizard";
 import { getTimezoneName } from "common/src/index";
 
+const allowInconsistentDates = process.env.REACT_APP_ALLOW_INCONSISTENT_DATES === "true";
+
 export const RoundValidationSchema = yup.object().shape({
   roundMetadata: yup.object({
     name: yup
@@ -196,19 +198,19 @@ export function RoundDetailForm(props: RoundDetailFormProps) {
   const yesterday = moment().subtract(1, "day");
 
   const disablePastDate = (current: moment.Moment) => {
-    return current.isAfter(yesterday);
+    return allowInconsistentDates || current.isAfter(yesterday);
   };
 
   function disableBeforeApplicationStartDate(current: moment.Moment) {
-    return current.isAfter(applicationStartDate);
+    return allowInconsistentDates || current.isAfter(applicationStartDate);
   }
 
   const disablePastAndBeforeRoundStartDate = (current: moment.Moment) => {
-    return disablePastDate(current);
+    return allowInconsistentDates || disablePastDate(current);
   };
 
   function disableBeforeRoundStartDate(current: moment.Moment) {
-    return current.isAfter(roundStartDate);
+    return allowInconsistentDates || current.isAfter(roundStartDate);
   }
 
   useEffect(() => {
